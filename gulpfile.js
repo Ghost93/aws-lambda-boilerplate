@@ -2,7 +2,6 @@ var del = require('del'),
     gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
     runSequence = require('run-sequence'),
-    gulpNSP = require('gulp-nsp'),
     mocha = require('gulp-mocha'),
     install = require('gulp-install'),
     lambda = require('gulp-awslambda'),
@@ -80,10 +79,6 @@ gulp.task('test-run', function() {
         .pipe(mocha());
 });
 
-//To check your package.json
-gulp.task('test-nsp', function(cb) {
-    gulpNSP('./package.json', cb);
-});
 
 gulp.task('clean', function(cb) {
     return del([
@@ -95,7 +90,7 @@ gulp.task('clean', function(cb) {
 
 // NOTE: Running also build to avoid running against old code
 gulp.task('test', function() {
-    return runSequence('check', 'test-nsp');
+    return runSequence('check');
 });
 
 // NOTE: Running also build to avoid running against old code
