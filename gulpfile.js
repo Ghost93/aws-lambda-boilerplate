@@ -82,7 +82,9 @@ gulp.task('test-run', function() {
 
 //To check your package.json
 gulp.task('test-nsp', function(cb) {
-    gulpNSP('./package.json', cb);
+    gulpNSP({
+        package: __dirname + '/package.json'
+    }, cb);
 });
 
 gulp.task('clean', function(cb) {
@@ -102,7 +104,5 @@ gulp.task('test', function() {
 gulp.task('check', function() {
     return runSequence('test-run');
 });
-
-gulp.task('default', ['build', 'test']);
 
 gulp.task('default', ['build', 'test']);
