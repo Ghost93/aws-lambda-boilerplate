@@ -4,7 +4,7 @@ A boilerplate for developing, testing and deploying AWS Lambda functions using n
 
 ## Installation
 
-### Prerequisites 
+### Prerequisites
 
 Clone the project and trigger installation of the project dependencies by
 
@@ -13,7 +13,7 @@ Clone the project and trigger installation of the project dependencies by
     > npm install
 
 Set up your AWS credentials e.g. to ~/.aws/credentials (see http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html). e.g.
-    
+
     [default]
     aws_access_key_id = [YOUR_ACCESS_KEY_ID]
     aws_secret_access_key = [YOUR_SECRET_ACCESS_KEY]
@@ -33,7 +33,7 @@ Set up your module information into package.json prior to deployment
 
 ## Testing
 
-Run gulp tests. 
+Run gulp tests.
 
     > gulp test
 
@@ -50,6 +50,7 @@ This will create a new lamda function to the region defined in lambdaenv.json wi
 
 ## Release History
 
+* 2016/09/2 - v0.2.0 - Use Node JS 4.3 runtime
 * 2015/07/22 - v0.1.1 - Use lambda-wrapper instead of pseudolambda.
 * 2015/07/15 - v0.1.0 - Initial version of boilerplate
 
