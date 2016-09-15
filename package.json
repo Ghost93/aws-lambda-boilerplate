@@ -1,6 +1,6 @@
 {
   "name": "lambda-skeleton",
-  "version": "0.1.1",
+  "version": "0.0.1",
   "description": "Skeleton for Lambda function",
   "main": "src/index.js",
   "dependencies": {
@@ -30,6 +30,6 @@
     "test": "gulp test",
     "deploy": "gulp deploy"
   },
-  "author": "Mikael Puittinen/SC5 Online Oy",
+  "author": "Umar ServisHero",
   "license": "MIT"
 }

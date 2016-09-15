@@ -1,4 +1,4 @@
-# SC5 AWS LAMBDA MICROSERVICE BOILERPLATE
+# SH AWS LAMBDA MICROSERVICE BOILERPLATE
 
 A boilerplate for developing, testing and deploying AWS Lambda functions using node.js
 
@@ -8,9 +8,10 @@ A boilerplate for developing, testing and deploying AWS Lambda functions using n
 
 Clone the project and trigger installation of the project dependencies by
 
-    > git clone https://github.com/umarservishero/sc5-aws-lambda-boilerplate.git [module name]
+    > git clone https://github.com/umarservishero/sh-aws-lambda-boilerplate.git [module name]
     > cd [module name]
     > npm install
+    > rm -rf .git
 
 Set up your AWS credentials e.g. to ~/.aws/credentials (see http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html). e.g.
 
@@ -42,7 +43,7 @@ Tests reside in the tests/directory. Uses lambda-wrapper module to wrap the code
 ## Deploying to AWS
 
 The module is deployed to Lambda using
-    
+
     > gulp deploy
 
 This will create a new lamda function to the region defined in lambdaenv.json with the name [module_name]_[version] (cleaned up from illegal characters)
@@ -50,6 +51,7 @@ This will create a new lamda function to the region defined in lambdaenv.json wi
 
 ## Release History
 
+* 2016/09/15 - v0.2.1 - Update the code to ES6 standard
 * 2016/09/2 - v0.2.0 - Use Node JS 4.3 runtime
 * 2015/07/22 - v0.1.1 - Use lambda-wrapper instead of pseudolambda.
 * 2015/07/15 - v0.1.0 - Initial version of boilerplate
@@ -57,8 +59,4 @@ This will create a new lamda function to the region defined in lambdaenv.json wi
 
 ## License
 
-Copyright (c) 2015 [SC5](http://sc5.io/), licensed for users and contributors under MIT license.
-https://github.com/sc5/grunt-bobrsass-boilerplate/blob/master/LICENSE-MIT
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/SC5/sc5-aws-lambda-boilerplate/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+Copyright (c) 2016 [ServisHero](https://servishero.com/), licensed for users and contributors under MIT license.
