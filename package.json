@@ -1,7 +1,7 @@
 {
-  "name": "lambda-skeleton",
+  "name": "aws-lambda-boilerplate",
   "version": "0.1.1",
-  "description": "Skeleton for Lambda function",
+  "description": "Skeleton for AWS Lambda function",
   "main": "src/index.js",
   "dependencies": {
   },
@@ -31,6 +31,6 @@
     "test": "gulp test",
     "deploy": "gulp deploy"
   },
-  "author": "Mikael Puittinen/SC5 Online Oy",
+  "author": "saurshaz",
   "license": "MIT"
 }

@@ -1,4 +1,4 @@
 {
-	"Role" : "arn:aws:iam::ACCOUNT_ID:role/LAMBDA_ROLE_NAME",
+	"Role" : "arn:aws:iam::089818418882:role/saurshazlambda",
 	"Region" : "eu-west-1"
 }
