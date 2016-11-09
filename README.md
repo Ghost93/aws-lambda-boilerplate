@@ -1,4 +1,4 @@
-# SC5 AWS LAMBDA MICROSERVICE BOILERPLATE
+# AWS LAMBDA MICROSERVICE BOILERPLATE
 
 A boilerplate for developing, testing and deploying AWS Lambda functions using node.js
 
