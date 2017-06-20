@@ -1,7 +1,7 @@
 {
-  "name": "lambda-skeleton",
-  "version": "0.0.1",
-  "description": "Skeleton for Lambda function",
+  "name": "aws-lambda-boilerplate",
+  "version": "0.1.2",
+  "description": "Skeleton for AWS Lambda function",
   "main": "src/index.js",
   "dependencies": {
   },
@@ -17,6 +17,7 @@
     "gulp-jshint": "^1.8.3",
     "gulp-load-plugins": "^0.5.3",
     "gulp-mocha": "^2.1.2",
+    "gulp-nsp": "^0.4.5",
     "gulp-plumber": "^0.6.3",
     "gulp-serve": "^0.2.0",
     "gulp-using": "0.0.1",
@@ -30,6 +31,5 @@
     "test": "gulp test",
     "deploy": "gulp deploy"
   },
-  "author": "Umar ServisHero",
   "license": "MIT"
 }
