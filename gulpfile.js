@@ -2,6 +2,7 @@ var del = require('del'),
     gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
     runSequence = require('run-sequence'),
+    gulpNSP = require('gulp-nsp'),
     mocha = require('gulp-mocha'),
     install = require('gulp-install'),
     lambda = require('gulp-awslambda'),
@@ -10,7 +11,7 @@ var del = require('del'),
     package = require('./package.json'),
 /* Configurations. Note that most of the configuration is stored in
 the task context. These are mainly for repeating configuration items */
-    buildname = (package.name).replace(/[^A-Za-z0-9_-]/g, '_');
+    buildname = (package.name + '_' + package.version).replace(/[^A-Za-z0-9_-]/g, '_');
 
 /* Bump version number for package.json */
 // TODO Provide means for appending a patch id based on git commit id or md5 hash
@@ -53,9 +54,7 @@ gulp.task('deployzip', function() {
     var lambdaparams = {
         FunctionName: buildname,
         Description: package.description,
-        Role: lambdaenv.Role,
-        Runtime: 'nodejs4.3',
-        Publish: true
+        Role: lambdaenv.Role
     }, lambdaoptions = {
         region: lambdaenv.Region
     };
@@ -81,6 +80,12 @@ gulp.task('test-run', function() {
         .pipe(mocha());
 });
 
+//To check your package.json
+gulp.task('test-nsp', function(cb) {
+    gulpNSP({
+        package: __dirname + '/package.json'
+    }, cb);
+});
 
 gulp.task('clean', function(cb) {
     return del([
@@ -92,14 +97,12 @@ gulp.task('clean', function(cb) {
 
 // NOTE: Running also build to avoid running against old code
 gulp.task('test', function() {
-    return runSequence('check');
+    return runSequence('check', 'test-nsp');
 });
 
 // NOTE: Running also build to avoid running against old code
 gulp.task('check', function() {
     return runSequence('test-run');
 });
-
-gulp.task('default', ['build', 'test']);
 
 gulp.task('default', ['build', 'test']);
