@@ -8,7 +8,7 @@ A boilerplate for developing, testing and deploying AWS Lambda functions using n
 
 Clone the project and trigger installation of the project dependencies by
 
-    > git clone https://github.com/Ghost93/sc5-aws-lambda-boilerplate.git [module name]
+    > git clone https://github.com/Ghost93/aws-lambda-boilerplate.git [module name]
     > cd [module name]
     > npm install
     > rm -rf .git
